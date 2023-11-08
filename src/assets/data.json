@@ -1,0 +1,122 @@
+[
+    {
+        "name": "The Great Gatsby",
+        "price": 12.99,
+        "rating": 4.5,
+        "category": "Fiction"
+    },
+    {
+        "name": "To Kill a Mockingbird",
+        "price": 14.95,
+        "rating": 4.8,
+        "category": "Fiction"
+    },
+    {
+        "name": "The Catcher in the Rye",
+        "price": 11.99,
+        "rating": 4.3,
+        "category": "Fiction"
+    },
+    {
+        "name": "1984",
+        "price": 9.99,
+        "rating": 4.7,
+        "category": "Dystopian"
+    },
+    {
+        "name": "Pride and Prejudice",
+        "price": 13.99,
+        "rating": 4.6,
+        "category": "Romance"
+    },
+    {
+        "name": "The Hobbit",
+        "price": 10.50,
+        "rating": 4.4,
+        "category": "Fantasy"
+    },
+    {
+        "name": "Sapiens: A Brief History of Humankind",
+        "price": 16.99,
+        "rating": 4.2,
+        "category": "Non-Fiction"
+    },
+    {
+        "name": "The Silent Patient",
+        "price": 15.25,
+        "rating": 4.6,
+        "category": "Mystery"
+    },
+    {
+        "name": "The Girl on the Train",
+        "price": 12.75,
+        "rating": 4.0,
+        "category": "Thriller"
+    },
+    {
+        "name": "Educated: A Memoir",
+        "price": 17.99,
+        "rating": 4.7,
+        "category": "Biography"
+    },
+    {
+        "name": "The Alchemist",
+        "price": 11.25,
+        "rating": 4.8,
+        "category": "Self-Help"
+    },
+    {
+        "name": "The Road",
+        "price": 14.50,
+        "rating": 4.1,
+        "category": "Post-Apocalyptic"
+    },
+    {
+        "name": "The Subtle Art of Not Giving a F*ck",
+        "price": 13.99,
+        "rating": 4.3,
+        "category": "Self-Help"
+    },
+    {
+        "name": "Dune",
+        "price": 18.95,
+        "rating": 4.5,
+        "category": "Science Fiction"
+    },
+    {
+        "name": "Becoming",
+        "price": 16.75,
+        "rating": 4.8,
+        "category": "Autobiography"
+    },
+    {
+        "name": "Harry Potter and the Sorcerer's Stone",
+        "price": 9.99,
+        "rating": 4.7,
+        "category": "Fantasy"
+    },
+    {
+        "name": "Gone Girl",
+        "price": 12.25,
+        "rating": 4.2,
+        "category": "Mystery"
+    },
+    {
+        "name": "The Martian",
+        "price": 14.99,
+        "rating": 4.4,
+        "category": "Science Fiction"
+    },
+    {
+        "name": "The Immortal Life of Henrietta Lacks",
+        "price": 15.50,
+        "rating": 4.6,
+        "category": "Non-Fiction"
+    },
+    {
+        "name": "The Hunger Games",
+        "price": 10.99,
+        "rating": 4.3,
+        "category": "Young Adult"
+    }
+]
