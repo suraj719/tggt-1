@@ -4,8 +4,6 @@ const initialState: any = {
 };
 function rootReducer(state: any = initialState, action: any) {
   if (action.type === "SORT_PRICE") {
-    // console.log(state);
-
     if (action.order === "rand") {
       return {
         data: oridata,
@@ -48,27 +46,15 @@ function rootReducer(state: any = initialState, action: any) {
   }
   if (action.type === "SEARCH") {
     if (action.term) {
-      console.log("termed");
-
       return {
         data: oridata.filter((pro: any) =>
           pro.name.toLowerCase().includes(action.term.toLocaleLowerCase())
         ),
       };
-      // setTimeout(()=>{
-      //     dis
-      // },1000)
     } else {
       return { data: oridata };
     }
-  }
-
-  //   if(action.type==="SEARCH_SUCCESS") {
-  //     return {
-  //         state: action.searchdata
-  //     }
-  //   }
-  else {
+  } else {
     return state;
   }
 }

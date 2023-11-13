@@ -19,33 +19,9 @@ export function sortCategory(categ: string) {
     categ: categ,
   };
 }
-
 export function search(term: any) {
-  // console.log(term);
-  // debounces(term)
   return {
     type: "SEARCH",
     term: term,
   };
-}
-
-// export function debounce (term:any)  {
-//     // return (dispatch:any) => {
-//         return new Promise((resolve, reject) => {
-//             setTimeout(() => {
-//                 // Assuming oridata is defined somewhere in your code
-//                 // const oridata = [/* your data */];
-//                 resolve("done");
-//             }, 1000);
-//         })
-//         .then((done) => {
-//             // dispatch(search(term));
-//             search(term)
-//         })
-//     // };
-// }
-
-export async function debounces(term: any) {
-  // console.log("sgs");
-  setTimeout(() => {}, 5000);
 }
