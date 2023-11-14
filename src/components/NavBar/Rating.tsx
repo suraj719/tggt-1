@@ -11,7 +11,7 @@ export default function Rating() {
     <div>
       <label>Sort by rating:</label>
       <select onChange={handleRating} className="bg-gray-300 rounded-md p-2">
-        <option value="rand">Random</option>
+        <option value="random">Random</option>
         <option value="4-5">4 to 5</option>
         <option value="3-4">3 to 4</option>
         <option value="2-3">2 to 3</option>
