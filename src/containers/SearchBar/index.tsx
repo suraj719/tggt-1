@@ -1,25 +1,27 @@
-import SearchInput from "@/components/custom/SearchInput";
-import { search } from "@/redux/action";
-import React from "react";
-import { useDispatch } from "react-redux";
+import SearchInput from '@/components/custom/SearchInput';
+import { search } from '@/redux/action';
+import React from 'react';
+import { useDispatch } from 'react-redux';
 
-const index: React.FC = () => {
+const Index: React.FC = () => {
   const dispatch = useDispatch();
 
-  function debounce(func: any, delay: number) {
-    let timeoutId: any;
+  function debounce<T>(func: (args: T) => void, delay: number) {
+    let timeoutId: NodeJS.Timeout;
 
-    return function (...args: any) {
+    return function (args: T) {
       clearTimeout(timeoutId);
       timeoutId = setTimeout(() => {
         func(args);
       }, delay);
     };
   }
-  function handleSearch(e: React.ChangeEvent<HTMLInputElement>[]) {
-    dispatch(search(e[0].target.value));
+
+  function handleSearch(e: React.ChangeEvent<HTMLInputElement>) {
+    dispatch(search(e.target.value));
   }
-  const debouncedSearch = debounce(handleSearch, 1000);
+
+  const debouncedSearch = debounce<React.ChangeEvent<HTMLInputElement>>(handleSearch, 1000);
 
   return (
     <div>
@@ -28,4 +30,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default Index;

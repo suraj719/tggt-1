@@ -9,7 +9,7 @@ declare interface BookState {
 }
 declare interface ActionType {
   type: string;
-  order: string;
+  orderType: string;
   from: number;
   to: number;
   category: string;

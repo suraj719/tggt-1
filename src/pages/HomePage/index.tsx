@@ -1,8 +1,10 @@
-import { useState } from "react";
-import BookCard from "@/components/BookCard.tsx";
-import Pagination from "@/components/Pagination/index.tsx";
-import { useSelector } from "react-redux";
-import SortingElements from "@/containers/SortingElements";
+import { useState } from 'react';
+import BookCard from '@/containers/CardContainer';
+import Pagination from '@/containers/Pagination';
+import { useSelector } from 'react-redux';
+import SortingElements from '@/containers/SortingElements';
+import Heading from '@/components/base/Heading';
+
 export default function HomePage() {
   const [currentPage, setCurrpage] = useState(1);
   const postsPerPage = 8;
@@ -27,14 +29,10 @@ export default function HomePage() {
               />
             ))}
           </div>
-          <Pagination
-            PostsPerPage={postsPerPage}
-            totalPosts={books.length}
-            paginate={paginate}
-          />
+          <Pagination PostsPerPage={postsPerPage} totalPosts={books.length} paginate={paginate} />
         </>
       ) : (
-        <p className="text-center font-bold">no results found</p>
+        <Heading value="no results found" />
       )}
     </>
   );
