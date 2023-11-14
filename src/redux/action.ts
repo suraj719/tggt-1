@@ -13,15 +13,15 @@ export function sortRating(from: number, to: number) {
   };
 }
 
-export function sortCategory(categ: string) {
+export function sortCategory(category: string) {
   return {
     type: "SORT_CATEGORY",
-    categ: categ,
+    category: category,
   };
 }
-export function search(term: any) {
+export function search(searchTerm: String) {
   return {
     type: "SEARCH",
-    term: term,
+    searchTerm: searchTerm,
   };
 }

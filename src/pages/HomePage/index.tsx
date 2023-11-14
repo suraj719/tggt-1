@@ -9,7 +9,7 @@ export default function HomePage() {
   const postsPerPage = 8;
   const idlastp = currentPage * postsPerPage;
   const idfirstp = idlastp - postsPerPage;
-  const books = useSelector((state: any) => state.data);
+  const books = useSelector((state: any) => state.books);
   const currentbooks = books.slice(idfirstp, idlastp);
   const paginate = (pagenum: any) => setCurrpage(pagenum);
   return (
@@ -21,7 +21,7 @@ export default function HomePage() {
             {currentbooks.map((book: any, index: number) => (
               <BookCard
                 key={index + 1}
-                name={book.name}
+                bookName={book.bookName}
                 price={book.price}
                 rating={book.rating}
                 category={book.category}
