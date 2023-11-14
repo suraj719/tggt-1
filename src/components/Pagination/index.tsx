@@ -1,11 +1,14 @@
-
 interface PaginationProps {
   PostsPerPage: number;
   totalPosts: number;
   paginate: (pageNumber: number) => void;
 }
 
-const Pagination: React.FC<PaginationProps> = ({ PostsPerPage, totalPosts, paginate }) => {
+const Pagination: React.FC<PaginationProps> = ({
+  PostsPerPage,
+  totalPosts,
+  paginate,
+}) => {
   const PageNums = Array.from(
     { length: Math.ceil(totalPosts / PostsPerPage) },
     (_, index) => index + 1,

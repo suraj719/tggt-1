@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 interface SelectProps {
   onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;

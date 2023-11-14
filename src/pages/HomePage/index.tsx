@@ -2,7 +2,7 @@ import { useState } from "react";
 import BookCard from "@/components/BookCard.tsx";
 import Pagination from "@/components/Pagination/index.tsx";
 import { useSelector } from "react-redux";
-import SortingElements from "@/containers/SortingElements"
+import SortingElements from "@/containers/SortingElements";
 export default function HomePage() {
   const [currentPage, setCurrpage] = useState(1);
   const postsPerPage = 8;

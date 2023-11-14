@@ -1,8 +1,8 @@
-import React from 'react';
+import React from "react";
 
 interface SearchProps {
-    placeholder: string;
-    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const SearchInput: React.FC<SearchProps> = ({ placeholder, onChange }) => {

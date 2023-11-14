@@ -1,12 +1,10 @@
-
-import SearchInput from '@/components/custom/SearchInput';
-import { search } from '@/redux/action';
-import React from 'react';
-import { useDispatch } from 'react-redux';
+import SearchInput from "@/components/custom/SearchInput";
+import { search } from "@/redux/action";
+import React from "react";
+import { useDispatch } from "react-redux";
 
 const index: React.FC = () => {
-  
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
   function debounce(func: any, delay: number) {
     let timeoutId: any;
@@ -25,7 +23,7 @@ const index: React.FC = () => {
 
   return (
     <div>
-        <SearchInput placeholder='search for a book' onChange={debouncedSearch} />
+      <SearchInput placeholder="search for a book" onChange={debouncedSearch} />
     </div>
   );
 };
