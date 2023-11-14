@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { sortCategory } from "../../redux/action";
+import { sortCategory } from "@/redux/action";
 
 export default function Category() {
   const dispatch = useDispatch();

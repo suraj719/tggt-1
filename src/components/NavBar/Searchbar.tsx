@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { search } from "../../redux/action";
+import { search } from "@/redux/action";
 export default function Searchbar() {
   const dispatch = useDispatch();
   function debounce(func: any, delay: number) {

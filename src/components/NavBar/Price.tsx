@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { sortPrice } from "../../redux/action";
+import { sortPrice } from "@/redux/action";
 
 export default function Price() {
   const dispatch = useDispatch();

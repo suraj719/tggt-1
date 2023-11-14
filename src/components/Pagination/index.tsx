@@ -1,8 +1,9 @@
 const Pagination = ({ PostsPerPage, totalPosts, paginate }: any) => {
-  let PageNums = [];
-  for (let i = 1; i <= Math.ceil(totalPosts / PostsPerPage); i++) {
-    PageNums.push(i);
-  }
+  // let PageNums = [];
+  // for (let i = 1; i <= Math.ceil(totalPosts / PostsPerPage); i++) {
+  //   PageNums.push(i);
+  // }
+  const PageNums = Array.from({ length: Math.ceil(totalPosts / PostsPerPage) }, (_, index) => index + 1);
   return (
     <>
       <div className="flex justify-center mt-10">

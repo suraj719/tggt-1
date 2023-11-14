@@ -1,5 +1,5 @@
 import { useDispatch } from "react-redux";
-import { sortRating } from "../../redux/action";
+import { sortRating } from "@/redux/action";
 
 export default function Rating() {
   const dispatch = useDispatch();

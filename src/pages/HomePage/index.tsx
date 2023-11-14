@@ -1,7 +1,7 @@
 import { useState } from "react";
-import NavBar from "../../components/NavBar";
-import BookCard from "../../components/BookCard.tsx";
-import Pagination from "../../components/Pagination/index.tsx";
+import NavBar from "@/components/NavBar";
+import BookCard from "@/components/BookCard.tsx";
+import Pagination from "@/components/Pagination/index.tsx";
 import { useSelector } from "react-redux";
 
 export default function HomePage() {
