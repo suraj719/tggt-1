@@ -24,7 +24,8 @@ function rootReducer(state: BookState = initialState, action: ActionType) {
     if (action.from && action.to) {
       return {
         books: originalData.filter(
-          (book: Book) => book.rating >= action.from && book.rating <= action.to,
+          (book: Book) =>
+            book.rating >= action.from && book.rating <= action.to,
         ),
       };
     } else {

@@ -1,24 +1,23 @@
 import { useState } from "react";
-import NavBar from "@/components/NavBar";
 import BookCard from "@/components/BookCard.tsx";
 import Pagination from "@/components/Pagination/index.tsx";
 import { useSelector } from "react-redux";
-
+import SortingElements from "@/containers/SortingElements"
 export default function HomePage() {
   const [currentPage, setCurrpage] = useState(1);
   const postsPerPage = 8;
   const idlastp = currentPage * postsPerPage;
   const idfirstp = idlastp - postsPerPage;
-  const books = useSelector((state: any) => state.books);
+  const books = useSelector((state: BookState) => state.books);
   const currentbooks = books.slice(idfirstp, idlastp);
-  const paginate = (pagenum: any) => setCurrpage(pagenum);
+  const paginate = (pagenum: number) => setCurrpage(pagenum);
   return (
     <>
-      <NavBar />
+      <SortingElements />
       {books.length > 0 ? (
-        <div>
+        <>
           <div className="flex justify-center items-center flex-wrap gap-5">
-            {currentbooks.map((book: any, index: number) => (
+            {currentbooks.map((book: Book, index: number) => (
               <BookCard
                 key={index + 1}
                 bookName={book.bookName}
@@ -33,7 +32,7 @@ export default function HomePage() {
             totalPosts={books.length}
             paginate={paginate}
           />
-        </div>
+        </>
       ) : (
         <p className="text-center font-bold">no results found</p>
       )}
