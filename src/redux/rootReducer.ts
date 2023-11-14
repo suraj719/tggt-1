@@ -24,7 +24,7 @@ function rootReducer(state: BookState = initialState, action: ActionType) {
     if (action.from && action.to) {
       return {
         books: originalData.filter(
-          (pro: any) => pro.rating >= action.from && pro.rating <= action.to
+          (pro: any) => pro.rating >= action.from && pro.rating <= action.to,
         ),
       };
     } else {
@@ -39,7 +39,7 @@ function rootReducer(state: BookState = initialState, action: ActionType) {
         books: originalData.filter((pro: any) =>
           pro.category
             .toLowerCase()
-            .includes(action.category.toLocaleLowerCase())
+            .includes(action.category.toLocaleLowerCase()),
         ),
       };
     } else {
@@ -52,7 +52,9 @@ function rootReducer(state: BookState = initialState, action: ActionType) {
     if (action.searchTerm) {
       return {
         books: originalData.filter((pro: any) =>
-          pro.name.toLowerCase().includes(action.searchTerm.toLocaleLowerCase())
+          pro.name
+            .toLowerCase()
+            .includes(action.searchTerm.toLocaleLowerCase()),
         ),
       };
     } else {
