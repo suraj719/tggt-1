@@ -4,15 +4,8 @@ interface PaginationProps {
   paginate: (pageNumber: number) => void;
 }
 
-const Pagination: React.FC<PaginationProps> = ({
-  PostsPerPage,
-  totalPosts,
-  paginate,
-}) => {
-  const PageNums = Array.from(
-    { length: Math.ceil(totalPosts / PostsPerPage) },
-    (_, index) => index + 1,
-  );
+const Pagination: React.FC<PaginationProps> = ({ PostsPerPage, totalPosts, paginate }) => {
+  const PageNums = Array.from({ length: Math.ceil(totalPosts / PostsPerPage) }, (_, index) => index + 1);
 
   return (
     <>

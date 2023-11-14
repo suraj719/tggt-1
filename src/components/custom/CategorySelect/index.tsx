@@ -1,5 +1,5 @@
-import React from "react";
-
+import React from 'react';
+import Option from '@/components/base/Option';
 interface SelectProps {
   onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
 }
@@ -9,11 +9,11 @@ const CategorySelect: React.FC<SelectProps> = ({ onChange }) => {
     <div>
       <label>Sort by category:</label>
       <select onChange={onChange} className="bg-gray-300 rounded-md p-2">
-        <option value="random">Random</option>
-        <option value="Fiction">Fiction</option>
-        <option value="Dystopian">Dystopian</option>
-        <option value="Mystery">Mystery</option>
-        <option value="Romance">Romance</option>
+        <Option value="random" label="Random" />
+        <Option value="Fiction" label="Fiction" />
+        <Option value="Dystopian" label="Dystopian" />
+        <Option value="Mystery" label="Mystery" />
+        <Option value="Romance" label="Romance" />
       </select>
     </div>
   );

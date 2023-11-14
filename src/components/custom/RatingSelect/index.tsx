@@ -1,4 +1,5 @@
-import React from "react";
+import React from 'react';
+import Option from '@/components/base/Option';
 
 interface SelectProps {
   onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
@@ -9,11 +10,11 @@ const RatingSelect: React.FC<SelectProps> = ({ onChange }) => {
     <div>
       <label>Sort by rating:</label>
       <select onChange={onChange} className="bg-gray-300 rounded-md p-2">
-        <option value="random">Random</option>
-        <option value="4-5">4 to 5</option>
-        <option value="3-4">3 to 4</option>
-        <option value="2-3">2 to 3</option>
-        <option value="1-2">1 to 2</option>
+        <Option value="random" label="Random" />
+        <Option value="4-5" label="4 to 5" />
+        <Option value="3-4" label="3 to 4" />
+        <Option value="2-3" label="2 to 3" />
+        <Option value="1-2" label="1 to 2" />
       </select>
     </div>
   );

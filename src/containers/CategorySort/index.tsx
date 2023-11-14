@@ -1,7 +1,7 @@
-import { sortCategory } from "@/redux/action";
-import React from "react";
-import { useDispatch } from "react-redux";
-import CategorySelect from "@/components/custom/CategorySelect";
+import { sortCategory } from '@/redux/action';
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import CategorySelect from '@/components/custom/CategorySelect';
 
 const index: React.FC = () => {
   const dispatch = useDispatch();

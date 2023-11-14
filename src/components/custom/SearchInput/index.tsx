@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface SearchProps {
   placeholder: string;
@@ -8,12 +8,7 @@ interface SearchProps {
 const SearchInput: React.FC<SearchProps> = ({ placeholder, onChange }) => {
   return (
     <div>
-      <input
-        placeholder={placeholder}
-        type="search"
-        className="bg-gray-300 py-3 px-5 rounded-md"
-        onChange={onChange}
-      />
+      <input placeholder={placeholder} type="search" className="bg-gray-300 py-3 px-5 rounded-md" onChange={onChange} />
     </div>
   );
 };
