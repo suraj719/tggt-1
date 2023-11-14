@@ -1,25 +1,34 @@
-const Pagination = ({ PostsPerPage, totalPosts, paginate }: any) => {
-  let PageNums = [];
-  for (let i = 1; i <= Math.ceil(totalPosts / PostsPerPage); i++) {
-    PageNums.push(i);
-  }
+interface PaginationProps {
+  PostsPerPage: number;
+  totalPosts: number;
+  paginate: (pageNumber: number) => void;
+}
+
+const Pagination: React.FC<PaginationProps> = ({
+  PostsPerPage,
+  totalPosts,
+  paginate,
+}) => {
+  const PageNums = Array.from(
+    { length: Math.ceil(totalPosts / PostsPerPage) },
+    (_, index) => index + 1,
+  );
+
   return (
     <>
       <div className="flex justify-center mt-10">
         <ul className="pagination gap-3 flex">
-          {PageNums.map((num) => {
-            return (
-              <li key={num} className="page-item">
-                <a
-                  onClick={() => paginate(num)}
-                  href="#"
-                  className="font-bold bg-gray-800 text-white p-3 rounded-md"
-                >
-                  {num}
-                </a>
-              </li>
-            );
-          })}
+          {PageNums.map((pageNumber) => (
+            <li key={pageNumber} className="page-item">
+              <a
+                onClick={() => paginate(pageNumber)}
+                href="#"
+                className="font-bold bg-gray-800 text-white p-3 rounded-md"
+              >
+                {pageNumber}
+              </a>
+            </li>
+          ))}
         </ul>
       </div>
     </>

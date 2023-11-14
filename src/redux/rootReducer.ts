@@ -24,7 +24,8 @@ function rootReducer(state: BookState = initialState, action: ActionType) {
     if (action.from && action.to) {
       return {
         books: originalData.filter(
-          (pro: any) => pro.rating >= action.from && pro.rating <= action.to
+          (book: Book) =>
+            book.rating >= action.from && book.rating <= action.to,
         ),
       };
     } else {
@@ -36,10 +37,10 @@ function rootReducer(state: BookState = initialState, action: ActionType) {
   if (action.type === "SORT_CATEGORY") {
     if (action.category !== "random") {
       return {
-        books: originalData.filter((pro: any) =>
-          pro.category
+        books: originalData.filter((book: Book) =>
+          book.category
             .toLowerCase()
-            .includes(action.category.toLocaleLowerCase())
+            .includes(action.category.toLocaleLowerCase()),
         ),
       };
     } else {
@@ -51,8 +52,10 @@ function rootReducer(state: BookState = initialState, action: ActionType) {
   if (action.type === "SEARCH") {
     if (action.searchTerm) {
       return {
-        books: originalData.filter((pro: any) =>
-          pro.name.toLowerCase().includes(action.searchTerm.toLocaleLowerCase())
+        books: originalData.filter((book: Book) =>
+          book.bookName
+            .toLowerCase()
+            .includes(action.searchTerm.toLocaleLowerCase()),
         ),
       };
     } else {

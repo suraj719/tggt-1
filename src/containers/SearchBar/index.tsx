@@ -1,7 +1,11 @@
+import SearchInput from "@/components/custom/SearchInput";
+import { search } from "@/redux/action";
+import React from "react";
 import { useDispatch } from "react-redux";
-import { search } from "../../redux/action";
-export default function Searchbar() {
+
+const index: React.FC = () => {
   const dispatch = useDispatch();
+
   function debounce(func: any, delay: number) {
     let timeoutId: any;
 
@@ -12,18 +16,16 @@ export default function Searchbar() {
       }, delay);
     };
   }
-  function handleSearch(e: any) {
+  function handleSearch(e: React.ChangeEvent<HTMLInputElement>[]) {
     dispatch(search(e[0].target.value));
   }
   const debouncedSearch = debounce(handleSearch, 1000);
+
   return (
     <div>
-      <input
-        placeholder="Search"
-        type="search"
-        className="bg-gray-300 py-3 px-5 rounded-md"
-        onChange={debouncedSearch}
-      />
+      <SearchInput placeholder="search for a book" onChange={debouncedSearch} />
     </div>
   );
-}
+};
+
+export default index;
