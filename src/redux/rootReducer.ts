@@ -57,3 +57,4 @@ function rootReducer(state: BookState = initialState, action: ActionType) {
   }
 }
 export default rootReducer;
+// export type RootState = ReturnType<typeof rootReducer>;
