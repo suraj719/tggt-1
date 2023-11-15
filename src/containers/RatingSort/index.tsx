@@ -3,7 +3,7 @@ import { sortRating } from '@/redux/action';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-const index: React.FC = () => {
+const Index: React.FC = () => {
   const dispatch = useDispatch();
   const handleRating = (event: React.ChangeEvent<HTMLSelectElement>) => {
     const [minRating, maxRating] = event.target.value.split('-').map(Number);
@@ -17,4 +17,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default Index;

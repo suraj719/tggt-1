@@ -19,7 +19,7 @@ export function sortCategory(category: string) {
     category: category,
   };
 }
-export function search(searchTerm: String) {
+export function search(searchTerm: string) {
   return {
     type: 'SEARCH',
     searchTerm: searchTerm,

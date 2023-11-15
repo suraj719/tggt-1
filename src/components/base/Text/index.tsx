@@ -1,5 +1,5 @@
 interface IndexProps {
-  label: String;
+  label: string;
   value: string;
 }
 
