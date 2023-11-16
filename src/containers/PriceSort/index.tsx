@@ -3,7 +3,7 @@ import { sortPrice } from '@/redux/action';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-const index: React.FC = () => {
+const Index: React.FC = () => {
   const dispatch = useDispatch();
   const handlePrice = (e: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(sortPrice(e.target.value));
@@ -15,4 +15,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default Index;

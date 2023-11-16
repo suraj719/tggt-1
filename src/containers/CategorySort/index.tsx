@@ -3,7 +3,7 @@ import React from 'react';
 import { useDispatch } from 'react-redux';
 import CategorySelect from '@/components/custom/CategorySelect';
 
-const index: React.FC = () => {
+const Index: React.FC = () => {
   const dispatch = useDispatch();
   const handleCategory = (event: React.ChangeEvent<HTMLSelectElement>) => {
     dispatch(sortCategory(event.target.value));
@@ -16,4 +16,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default Index;
